@@ -1,0 +1,9 @@
+FROM python:3.7-alpine
+
+MAINTAINER Anders Ballegaard (anderstb[@]hotmail<dot>dk)
+
+COPY . .
+
+RUN pip install -r requirements.txt
+
+ENTRYPOINT [ "python", "app.py" ]
